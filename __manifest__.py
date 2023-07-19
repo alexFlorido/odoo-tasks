@@ -1,10 +1,10 @@
 {
-    'name': "space_mission",
-    'summary': """Module to Logistic Handle of a Space Mission""",
+    'name': "Odoo Academy",
+    'summary': """Module to Logistic Handle of Course and Sessions""",
     'description': """Module Handle: 
-            - Logisctic
-            - Space travel ship
-            - Crew
+            - Curses
+            - Sessions
+            - Attendees
             """,
     'license': "OPL-1",
     'author': "alexFlorido",
