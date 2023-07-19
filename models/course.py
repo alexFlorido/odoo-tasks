@@ -1,7 +1,7 @@
 from odoo import fields, models 
 
 class Course(models.Model):
-    _name =  'course.course',
+    _name =  'academy.course',
     _description = 'Course info'
 
 
@@ -11,8 +11,8 @@ class Course(models.Model):
     description = fields.Text()
     level = fields.Selection(string="Level",
                              selection=[
-                                 ('beginner', "Beginner")
-                                 ('intermediate', "Intermediate")
-                                 ('advanced', "Advanced")
+                                 ("beginner", "Beginner"),
+                                 ('intermediate', "Intermediate"),
+                                 ('advanced', "Advanced"),
                              ],
                              copy=False)
