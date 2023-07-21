@@ -16,6 +16,9 @@
                         </group>
                         <group>
                             <separator string="Other Fields"/>
+                            <field name="base_price"></field>
+                            <field name="additional_fee"></field>
+                            <field name="total_price"></field>
                         </group>
                     </group>
                     <notebook>
@@ -37,6 +40,9 @@
                 <field name="name"/>
                 <field name="level"/>
                 <field name="description"/>
+                <field name="base_price"></field>
+                <field name="additional_fee"></field>
+                <field name="total_price"></field>
                 <field name="create_date" optional="hide"/>
             </tree>
         </field>
@@ -51,6 +57,18 @@
                 <field name="description"/>
                 <filter name="group_level" string="Level" context="{'group_by':'level'}"/>
             </search>
+        </field>
+    </record>
+    <record id="course_view_pivot" model="ir.ui.view">
+        <field name="name">course.view.pivot</field>
+        <field name="model">academy.course</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="level" type="row"/>
+                <field name="name" type="row"/>
+                <field name="base_price" type="measure"/>
+                <field name="total_price" type="measure"/>
+            </pivot>
         </field>
     </record>
 </odoo>
