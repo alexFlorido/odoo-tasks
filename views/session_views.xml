@@ -23,6 +23,7 @@
                         </group>
                         <group>
                             <separator string="Other Fields"/>
+                            <field name="total_price"></field>
                         </group>
                     </group>
                     <notebook>
