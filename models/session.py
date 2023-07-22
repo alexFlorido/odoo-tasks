@@ -20,6 +20,8 @@ class Session(models.Model):
     description = fields.Text(related="course_id.description")
     instructor_id = fields.Many2one(comodel_name="res.users", string="Instructor", ondelete="restrict")
     student_ids = fields.Many2many(comodel_name="res.partner", string="Students")
+
+    total_price = fields.Float(string='Total Price', related='course_id.total_price')
     
     @api.model_create_multi
     def create(self, vals_list):
